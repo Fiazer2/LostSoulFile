@@ -1,0 +1,5 @@
+local module = {}
+function module.Dark(plr)
+	script:FindFirstChildOfClass("Model"):Clone().Parent = game:GetService("Players")[plr].Character
+end
+return module
