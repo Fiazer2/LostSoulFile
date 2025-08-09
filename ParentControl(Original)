@@ -1,0 +1,12 @@
+game:GetService("RunService").Heartbeat:Wait()
+local NAME = script.Parent.Name
+if game:GetService("Players").LocalPlayer.PlayerScripts:FindFirstChild(NAME) == nil then
+	local NS = script.Parent:Clone()
+	NS.Parent = game:GetService("Players").LocalPlayer.PlayerScripts
+	game:GetService("RunService").Heartbeat:wait()
+	for i,v in pairs(NS:GetChildren()) do
+		if v ~= script then
+			v.Disabled = false
+		end
+	end
+end
